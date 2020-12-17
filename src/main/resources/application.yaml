@@ -1,0 +1,17 @@
+security:
+  oauth2:
+    client:
+      client_id: test1
+      client-secret: test1
+      user-authorization-uri: http://localhost:8080/oauth/authorize
+      access-token-uri: http://localhost:8080/oauth/token
+    resource:
+      jwt:
+        key-url: http://localhost:8080/oauth/token_key
+        key-value: test
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri:
